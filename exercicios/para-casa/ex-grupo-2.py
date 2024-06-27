@@ -1,3 +1,5 @@
+#exercício tabuada 
+
 numero = int(input("Informe um número para a tabuada entre 1 e 10: "))
 if numero < 1 or numero > 10:
     raise ValueError("Número inválido. Por favor, insira um número entre 1 e 10.")
@@ -8,8 +10,9 @@ for iterador in range(1, 11):
     print(f"{numero} X {iterador} = {resultado}")
 
 
+#exercício cardápio
 
-# Definição do cardápio como um dicionário de dicionários
+
 cardapio = {
     100: {"Lanche": "Cachorro Quente", "Preço": 1.20},
     101: {"Lanche": "Bauru Simples", "Preço": 1.30},
@@ -45,7 +48,7 @@ while True:
         valor_pago = preco_unitario * quantidade
         total_do_pedido += valor_pago
         
-        # Imprime o valor pago pelo item atual
+        
         print(f"Valor a ser pago por '{cardapio[codigo]['Lanche']}': R$ {valor_pago:.2f}")
     
     except ValueError:
@@ -53,6 +56,6 @@ while True:
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
 
-# Imprime o total geral do pedido
+
 print(f"Total geral do pedido: R$ {total_do_pedido:.2f}")
 print("Obrigado(a) por utilizar nossos serviços. Volte sempre!")

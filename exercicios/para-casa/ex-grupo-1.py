@@ -58,7 +58,7 @@ for iterador in range(1, 21):
     if quant_cds > 0:
         valor_medio = valor_total_investido / quant_cds
     else:
-        valor_medio = 0.0  # Evitar divisão por zero se não houver CDs
+        valor_medio = 0.0  
     
     print(f"O valor total investido em {quant_cds} CDs é: R$ {valor_total_investido:.2f}")
     print(f"O valor médio gasto por CD é: R$ {valor_medio:.2f}")
