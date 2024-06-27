@@ -1,0 +1,35 @@
+#Numa eleição existem três candidatos. Faça um programa que peça o número total de eleitores. Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato.
+
+numero_de_eleitores = int (input("Digite o numero de eleitores:\n"))
+
+voto_candidato01 = 0
+voto_candidato02 = 0
+voto_candidato03 = 0
+
+for escolha in range (numero_de_eleitores):
+    voto = int (input("Digite o numero do candidato (1, 2 ou 3)\n"))
+    if voto == 1:
+        voto_candidato01 += 1
+    elif voto == 2:
+        voto_candidato02 += 1
+    elif voto == 3:
+        voto_candidato03 += 1
+    else: 
+        print("Este não é um voto válido escolha entre 1, 2 ou 3")
+
+print(f"Total de votos para o Candidato 1: {voto_candidato01}\n")
+print(f"Total de votos para o Candidato 2: {voto_candidato02}\n")
+print(f"Total de votos para o Candidato 3: {voto_candidato03}\n")
+
+
+if voto_candidato01 > voto_candidato02 and voto_candidato01 > voto_candidato03:
+        print ("O candidato 1 venceu a eleição\n")
+
+elif voto_candidato02 > voto_candidato01 and voto_candidato02 > voto_candidato03:
+        print ("O candidato 2 venceu a eleição\n")
+    
+elif voto_candidato03 > voto_candidato01 and voto_candidato03 > voto_candidato02:
+        print ("O candidato 3 venceu a eleição\n")
+
+else: 
+        print ("Holve um empate nesta eleição\n")
