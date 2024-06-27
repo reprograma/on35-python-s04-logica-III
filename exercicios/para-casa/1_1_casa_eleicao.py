@@ -2,11 +2,21 @@
 
 # Numa eleição existem três candidatos. Faça um programa que peça o número total de eleitores. Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato.
 
+def solicita ():
+
+    print('-------- Eleições 2024 --------')
+    print('--------- Candidatas --------- ')
+
+    try:
+        eleitores = int(input('Quantidade de eleitores: '))
+        votacao(eleitores)
+    except:
+        print('Digite um número inteiro!')
+        
+        
 def votacao(qtd_eleitores):
 
-    agnes = 0
-    gaia = 0
-    ju = 0
+    agnes,gaia,ju = 0,0,0
 
 
     for iterador in range(0,qtd_eleitores):
@@ -47,16 +57,5 @@ def votacao(qtd_eleitores):
         else:
             print('Gaia empatou com Agnes')
 
-
-def solicita ():
-
-    print('-------- Eleições 2024 --------')
-    print('--------- Candidatas --------- ')
-
-    try:
-        eleitores = int(input('Quantidade de eleitores: '))
-        votacao(eleitores)
-    except:
-        print('Digite um número inteiro!')
 
 solicita()
