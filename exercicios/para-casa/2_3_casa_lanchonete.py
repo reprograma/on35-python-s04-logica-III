@@ -40,9 +40,7 @@ def valor_total(qtd_vezes):
     cod_102 = 1.5 
     cod_103 = 1.2
     cod_104 = 1.3 
-    cod_105 = 1 
-
-    
+    cod_105 = 1     
 
     qtd_pedido = int(input(f'Quantidade do {i}º pedido: '))
     codigo = int(input(f'Código do {i}º pedido: '))

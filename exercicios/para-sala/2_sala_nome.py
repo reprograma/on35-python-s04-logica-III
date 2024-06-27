@@ -40,5 +40,4 @@ def usuario_senha(nome):
     senha_maiusc = senha.upper()
   print('Usuário cadastrado com sucesso!') 
 
-
 solicitar()

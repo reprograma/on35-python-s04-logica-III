@@ -17,6 +17,4 @@ def zero_a_dez (num):
     num = int(input('Digite um número válido: '))
   return f'A nota digitada foi: {num}!'
 
-
-
 print(solicita())

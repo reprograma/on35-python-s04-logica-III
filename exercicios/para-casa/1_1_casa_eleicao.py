@@ -57,5 +57,4 @@ def votacao(qtd_eleitores):
         else:
             print('Gaia empatou com Agnes')
 
-
 solicita()
