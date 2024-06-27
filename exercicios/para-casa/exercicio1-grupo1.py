@@ -2,7 +2,7 @@ eleitores = int(input("Digite o número de eleitores: "))
 votos = []
 
 for eleitor in range(eleitores):
-    voto = int(input(f"Eleitor {eleitor+1} Digite o número do candidato: "))
+    voto = int(input(f"Eleitor {eleitor+1} Digite o número da candidata: "))
     if voto > len(votos):
         votos += [0] * (voto - len(votos))
     votos[voto - 1] += 1
