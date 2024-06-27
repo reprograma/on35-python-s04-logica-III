@@ -2,6 +2,14 @@
 
 # * Faça um programa que calcule o valor total investido por um colecionador em sua coleção de CDs e o valor médio gasto em cada um deles. O usuário deverá informar a quantidade de CDs e o valor para em cada um.
 
+def solicita_qtd_cds():
+    try:
+        solicita_qtd_cds = int(input('qts CDs você comprou? '))
+        preco = preco_medio(solicita_qtd_cds)
+        print(preco)
+    except:
+        print('Digite um número válido!')
+
 def preco_medio(qtd_cds):
 
     if qtd_cds > 0:
@@ -20,14 +28,5 @@ def preco_medio(qtd_cds):
         return f'O preço médio dos CDs foi R$ {preco_medio:.2f}'
     else:
         return 'Digite um número válido!'
-
-def solicita_qtd_cds():
-    try:
-        solicita_qtd_cds = int(input('qts CDs você comprou? '))
-        preco = preco_medio(solicita_qtd_cds)
-        print(preco)
-    except:
-        print('Digite um número válido!')
-
 
 solicita_qtd_cds()
