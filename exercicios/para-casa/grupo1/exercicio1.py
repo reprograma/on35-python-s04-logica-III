@@ -1,15 +1,18 @@
 #Numa eleição existem três candidatos. Faça um programa que peça o número total de eleitores. 
 # Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato.
 
-candidato1 = 1
-candidato2 = 2
-candidato3 = 3
+candidatos = ["Zoela", "Matteo", "Azzaro"]
+eleitores = int(input("Insira a quantidade total de eleitores: "))
+votos = []
 
-senha = input("Crie uma senha: ")
+for contagem in range (eleitores):
+    print(f"total de eleitores de {eleitores}")
+    voto = input("Insira o nome do seu candidato considerando as opções abaixo: \n Zoela \n Matteo \n Azzaro \n ").lower()
+    votos.append(voto)
+   
 
-while (senha == usuario):
-    print("A senha não pode ser o valor do usuário, gentileza criar nova senha.")
-    usuario = input("Crie um usuário: ")
-    senha = input("Crie uma senha: ")
+votos_Zoela = votos.count("zoela")
+votos_Matteo = votos.count("matteo")
+votos_Azzaro = votos.count("azzaro")
 
-print("Parabéns, seu cadastro foi realizado!")
+print (f"A quantidade de votos foi \nZoela teve {votos_Zoela}\nMatteo teve {votos_Matteo} \nAzzaro teve {votos_Azzaro}")
