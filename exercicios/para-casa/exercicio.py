@@ -4,22 +4,24 @@ votos_candidato1 = 0
 votos_candidato2 = 0
 votos_candidato3 = 0
 
-numero_eleitores = int(input("Quantos eleitores tem essa eleição?"))
+numero_eleitores_inserido = int(input("Quantos eleitores tem essa eleição?"))
 
-for eleicao in range (0, numero_eleitores):
-    voto = int(input("Você quer votar no cadidato1, candidato2 ou candidato3? Responda com o número."))
-    if voto == 1:
-        votos_candidato1 += 1
-    elif voto == 2:
-        votos_candidato2 += 1
-    elif voto == 3:
-        votos_candidato3 += 1
-    else:
-        print("Seu voto é inválido")
+def votacao(numero_eleitores):
+    for eleicao in range (0, numero_eleitores):
         voto = int(input("Você quer votar no cadidato1, candidato2 ou candidato3? Responda com o número."))
-
-print(f"O candidato 1 teve {votos_candidato1}, o candidato 2 teve {votos_candidato2} e o candidato 3 teve {votos_candidato3}")
-  
+        while not voto in range(1,4):
+            print("Voto inválido")
+            voto = int(input("Você quer votar no cadidato1, candidato2 ou candidato3? Responda com o número."))
+        if voto == 1:
+            votos_candidato1 += 1
+        elif voto == 2:
+            votos_candidato2 += 1
+        elif voto == 3:
+            votos_candidato3 += 1
+        
+    print(f"O candidato 1 teve {votos_candidato1}, o candidato 2 teve {votos_candidato2} e o candidato 3 teve {votos_candidato3}")
+    
+votacao(numero_eleitores_inserido)
 
 
 
