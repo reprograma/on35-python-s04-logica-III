@@ -16,21 +16,23 @@ valor_por_itens=[]
 pedido_finalizado ="não"
 
 while pedido_finalizado == "não":
-
+    
     codigo = int(input("Insira o código do produto: "))  
-    quantidade = int(input("Insira a quantidade: "))
-    valor_item = float(cardapio[codigo]['preco']) * (quantidade)
-    itens_pedido.append(codigo),itens_pedido.append({cardapio[codigo]['item']}),itens_pedido.append(quantidade),itens_pedido.append(valor_item)
-    valor_por_itens.append(valor_item)
+    while codigo not in (cardapio):
+        print("Código invalido, tente novamente")
+        codigo = int(input("Insira o código do produto: "))  
+    else:
+        quantidade = int(input("Insira a quantidade: "))
+        valor_item = float(cardapio[codigo]['preco']) * (quantidade)
+        itens_pedido.append(codigo),itens_pedido.append({cardapio[codigo]['item']}),itens_pedido.append(quantidade),itens_pedido.append(valor_item)
+        valor_por_itens.append(valor_item)    
     
     pedido_finalizado = input("Deseja finalizar seu pedido?(sim/não): ").lower()
-    if pedido_finalizado == "sim" :
-        print(itens_pedido,sep="\n")
-        total_do_pedido = sum(valor_por_itens)
-        print(f"Pedido finalizado - Valor final R${total_do_pedido:.2f}, Obrigado pela sua compra!")
-        break
-    
-
+    if pedido_finalizado == "sim" :        
+         print(itens_pedido,"\n")
+         total_do_pedido = sum(valor_por_itens)
+         print(f"Pedido finalizado - Valor final R${total_do_pedido:.2f} Obrigado pela sua compra!")
+        
 
 
    

@@ -1,22 +1,25 @@
 # Exercício de Casa 🏠 
 
 ## Nome do Exercicio
-
 ## Grupo 1
 # * Numa eleição existem três candidatos. Faça um programa que peça o número total de eleitores. Peça para cada eleitor votar e ao final mostrar o número de votos de cada candidato.
 
-
-
-candidatos=["Maria","Joao","Jose"]
+#candidatos=["Maria","Joao","Jose"]
  
 eleitores =int(input("Número de eleitores: "))
-candidatos=["Maria","Joao","Jose"]
+candidatos=["maria","joao","jose"]
 
 lista_votos=[]
 for eleitor in range(eleitores):
     nome_candidato = input("Escolha um dos três candidato para votar:\n-Maria\n-Jose,\n-Joao\n \n- ").lower()
-    lista_votos.append(nome_candidato)
-    
+
+    while nome_candidato not in candidatos:
+        print("candidato invalido, tente novamente")
+        nome_candidato = input("Escolha um dos três candidato para votar:\n-Maria\n-Jose,\n-Joao\n \n- ").lower()
+        
+    else:
+        lista_votos.append(nome_candidato)
+        
 
 votos_maria = lista_votos.count("maria")
 print(f"{candidatos[0]}: {votos_maria} voto(s)")

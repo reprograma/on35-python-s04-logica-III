@@ -7,8 +7,8 @@ numero = int(input("insira o número da tabua: "))
 
 tabuada=[]
 for sequencia in range(1,11):
-       resulatado = numero * sequencia
-       expressao = f"{numero} x {sequencia} = {resulatado}"
+       resultado = numero * sequencia
+       expressao = f"{numero} x {sequencia} = {resultado}"
        tabuada.append(expressao)
 
 print(f"A tabuada do {numero}:")
